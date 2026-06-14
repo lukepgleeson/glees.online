@@ -1,0 +1,39 @@
+.birds-layer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3; /* Sits cleanly on top of the islands (z-index: 2) for a realistic overhead look */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bird-flock {
+    position: absolute;
+    width: 80px;  /* Adjust based on the resolution of your birds.gif */
+    height: auto;
+    /* Smooth linear motion across the screen over a 4.5-second duration */
+    animation: fly-se-to-nw 7s linear forwards; 
+}
+
+/* 
+  Trajectory: Moves from its randomized SE spawn point up and left (-X, -Y) 
+  to fly completely off the top-left edge of the screen.
+*/
+@keyframes fly-se-to-nw {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8; /* Quick fade-in as they enter the visible viewport area */
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-120vw, -120vh); /* Flies completely clear of the NW corner */
+        opacity: 0;
+    }
+}

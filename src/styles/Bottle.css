@@ -1,0 +1,81 @@
+.bottle-layer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1.5; /* Between WhiteHorses (1) and Hex-Grid (2) */
+    pointer-events: none; /* Let clicks pass through the general layout box */
+    overflow: hidden;
+}
+
+.floating-bottle {
+    position: absolute;
+    width: 45px; /* Adjust based on your bottle asset size */
+    height: auto;
+    cursor: pointer;
+    pointer-events: auto; /* Explicitly re-enable clicks on the bottle itself */
+    
+    /* Smooth linear motion following the SSW sea currents over 25 seconds */
+    animation: drift-ssw 25s linear forwards;
+}
+
+.floating-bottle:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* SSW Drifting path: moves way down (+Y) and slightly left (-X) */
+@keyframes drift-ssw {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        /* Moves 120% down and shifts left proportionally to match the waves */
+        transform: translate(-50vw, 120vh) rotate(25deg);
+    }
+}
+
+/* Simple Placeholder Modal Styles */
+.bottle-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Floats above everything, including the cursor */
+}
+
+.bottle-modal-content {
+    background: #f7f2e8; /* Soft parchment paper style color */
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid #8b5a2b;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    font-family: Georgia, serif;
+    color: #4a2e16;
+}
+
+.bottle-modal-close-btn {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.bottle-modal-close-btn:hover {
+    background: #6e441f;
+}
