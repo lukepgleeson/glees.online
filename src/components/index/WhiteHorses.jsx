@@ -1,6 +1,6 @@
 import React from 'react';
-import whiteHorsesImg from '../assets/Whitehorse.gif';
-import '../styles/WhiteHorses.css';
+import whiteHorsesImg from '../../assets/Whitehorse.gif';
+import '../../styles/index/WhiteHorses.css';
 
 export default function WhiteHorsesBackground() {
     return (

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../styles/CustomCursor.css'; // Dedicated cursor styling
-import boatNorth from '../assets/BoatN.gif';
-import boatSouth from '../assets/BoatS.gif';
-import boatWest from '../assets/BoatW.gif';
-import boatEast from '../assets/BoatE.gif';
-import boatNorthEast from '../assets/BoatNE.gif';
-import boatNorthWest from '../assets/BoatNW.gif';
-import boatSouthWest from '../assets/BoatSW.gif';
-import boatSouthEast from '../assets/BoatSE.gif';
+import '../../styles/index/CustomCursor.css'; // Dedicated cursor styling
+import boatNorth from '../../assets/BoatN.gif';
+import boatSouth from '../../assets/BoatS.gif';
+import boatWest from '../../assets/BoatW.gif';
+import boatEast from '../../assets/BoatE.gif';
+import boatNorthEast from '../../assets/BoatNE.gif';
+import boatNorthWest from '../../assets/BoatNW.gif';
+import boatSouthWest from '../../assets/BoatSW.gif';
+import boatSouthEast from '../../assets/BoatSE.gif';
 
 const CURSOR_GIFS = {
   north: boatNorth,

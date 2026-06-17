@@ -1,6 +1,6 @@
 import React from 'react';
-import northImg from '../assets/North.png';
-import '../styles/North.css'
+import northImg from '../../assets/North.png';
+import '../../styles/index/North.css'
 
 export default function North() {
     return (

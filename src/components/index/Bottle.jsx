@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import bottleImg from '../assets/bottle.gif'; // Make sure your bottle image is in assets
-import '../styles/Bottle.css';
+import bottleImg from '../../assets/bottle.gif';
+import '../../styles/index/Bottle.css';
 
 export default function Bottle() {
   const [bottles, setBottles] = useState([]);

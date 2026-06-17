@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import birdsImg from '../assets/Birds.gif';
-import '../styles/Birds.css';
+import birdsImg from '../../assets/Birds.gif';
+import '../../styles/index/Birds.css';
 
 export default function Birds() {
   const [flocks, setFlocks] = useState([]);

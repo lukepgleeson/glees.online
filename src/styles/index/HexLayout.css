@@ -31,10 +31,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;               
-  height: 300px;              
-  margin-top: -150px;         /* Half of height to perfectly center (300 / 2) */
-  margin-left: -150px;        /* Half of width to perfectly center (300 / 2) */
+  width: 370px;               
+  height: 370px;              
+  margin-top: -185px;         /* Half of height to perfectly center (300 / 2) */
+  margin-left: -185px;        /* Half of width to perfectly center (300 / 2) */
   
   background: none;
   border: none;
@@ -63,46 +63,43 @@ body {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
-/* --- Naturally Stretched Hexagonal Positioning --- */
+/* --- Naturally Stretched Pentagonal Positioning --- */
 
-/* Island 1: Top Center */
+/* Island 1: Top Center (0 degrees) */
 .island-1 {
   --x: 0px;
   --y: calc(-1 * var(--map-radius));
   transform: translate(var(--x), var(--y));
 }
 
-/* Island 2: Top Right (Extra Stretched X) */
+/* Island 2: Top Right (72 degrees) */
+/* Math: sin(72) = 0.95, cos(72) = 0.31 */
 .island-2 {
-  --x: calc(var(--map-radius) * 0.866 * var(--width-stretch));
-  --y: calc(var(--map-radius) * -0.45);
+  --x: calc(var(--map-radius) * 0.951 * var(--width-stretch));
+  --y: calc(var(--map-radius) * -0.309);
   transform: translate(var(--x), var(--y));
 }
 
-/* Island 3: Bottom Right (Extra Stretched X) */
+/* Island 3: Bottom Right (144 degrees) */
+/* Math: sin(144) = 0.58, cos(144) = -0.81 */
 .island-3 {
-  --x: calc(var(--map-radius) * 0.866 * var(--width-stretch));
-  --y: calc(var(--map-radius) * 0.55);
+  --x: calc(var(--map-radius) * 0.587 * var(--width-stretch));
+  --y: calc(var(--map-radius) * 0.809);
   transform: translate(var(--x), var(--y));
 }
 
-/* Island 4: Bottom Center */
+/* Island 4: Bottom Left (216 degrees) */
+/* Math: sin(216) = -0.58, cos(216) = -0.81 */
 .island-4 {
-  --x: 0px;
-  --y: calc(var(--map-radius) * 1.05);
+  --x: calc(var(--map-radius) * -0.587 * var(--width-stretch));
+  --y: calc(var(--map-radius) * 0.809);
   transform: translate(var(--x), var(--y));
 }
 
-/* Island 5: Bottom Left (Extra Stretched X) */
+/* Island 5: Top Left (288 degrees) */
+/* Math: sin(288) = -0.95, cos(288) = 0.31 */
 .island-5 {
-  --x: calc(var(--map-radius) * -0.866 * var(--width-stretch));
-  --y: calc(var(--map-radius) * 0.45);
-  transform: translate(var(--x), var(--y));
-}
-
-/* Island 6: Top Left (Extra Stretched X) */
-.island-6 {
-  --x: calc(var(--map-radius) * -0.866 * var(--width-stretch));
-  --y: calc(var(--map-radius) * -0.55);
+  --x: calc(var(--map-radius) * -0.951 * var(--width-stretch));
+  --y: calc(var(--map-radius) * -0.309);
   transform: translate(var(--x), var(--y));
 }
