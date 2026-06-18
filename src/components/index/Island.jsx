@@ -4,7 +4,7 @@ export default function Island(props) {
         <button 
         key={props.id} 
         className={`island-btn island-${props.id}`}
-        onClick={() => alert(`Traveling to ${props.name}!`)}
+        onClick={() => props.action && props.handleClick(props.action)}
         >
         <img src={props.img} alt={props.name} className="island-img" />
         </button>

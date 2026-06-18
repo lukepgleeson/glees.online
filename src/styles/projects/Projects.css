@@ -1,0 +1,125 @@
+@keyframes ipadZoomIn {
+  0%   { transform: scale(0.05); opacity: 0; }
+  65%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+/* ── Overlay ─────────────────────────────────────────── */
+
+.ipad-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: default;
+}
+
+.ipad-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.ipad-close:hover { opacity: 1; }
+
+/* ── iPad frame ──────────────────────────────────────── */
+
+.ipad-wrap {
+  position: relative;
+  display: inline-block;
+  animation: ipadZoomIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ipad-bg {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+/* ── Screen area ─────────────────────────────────────── */
+
+/* Positioned over the blank white screen in Ipad.png.
+   Adjust percentages here if the content drifts outside the frame. */
+.ipad-screen {
+  position: absolute;
+  top: 22%;
+  left: 7%;
+  width: 77%;   /* stops before the home button */
+  height: 63%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2% 3%;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb transparent;
+}
+
+.ipad-screen::-webkit-scrollbar       { width: 4px; }
+.ipad-screen::-webkit-scrollbar-track { background: transparent; }
+.ipad-screen::-webkit-scrollbar-thumb { background: #bbb; border-radius: 2px; }
+
+/* ── Project cards ───────────────────────────────────── */
+
+.project-card {
+  display: flex;
+  gap: 3%;
+  padding: 3% 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-card:last-child { border-bottom: none; }
+
+.project-thumb {
+  flex-shrink: 0;
+  width: 28%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  min-width: 0;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.05vw;
+  font-weight: bold;
+  color: #111;
+  font-family: 'Georgia', serif;
+}
+
+.project-desc {
+  margin: 0;
+  font-size: 0.85vw;
+  line-height: 1.5;
+  color: #444;
+  font-family: 'Georgia', serif;
+}
+
+.project-link {
+  margin-top: auto;
+  font-size: 0.8vw;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #2255aa;
+  text-decoration: none;
+}
+
+.project-link:hover { text-decoration: underline; }
