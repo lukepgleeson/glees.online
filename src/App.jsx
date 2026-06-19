@@ -3,6 +3,7 @@ import Index from './components/index/Index.jsx';
 import Newspaper from './components/newspaper/Newspaper.jsx';
 import Projects from './components/projects/Projects.jsx';
 import AboutMe from './components/aboutme/AboutMe.jsx';
+import Degrees from './components/degrees/Degrees.jsx';
 import './styles/index/HexLayout.css';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       {modal === "NEWSPAPER" && <Newspaper onClose={() => setModal(null)} />}
       {modal === "PROJECTS"  && <Projects  onClose={() => setModal(null)} />}
       {modal === "ABOUT"     && <AboutMe   onClose={() => setModal(null)} />}
+      {modal === "DEGREES"   && <Degrees   onClose={() => setModal(null)} />}
     </>
   );
 }
