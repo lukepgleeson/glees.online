@@ -9,11 +9,13 @@ import islandData from './islandData'
 
 
 export default function Index(props) {
-    const islands = islandData.map(island => <Island key={island.id} id={island.id} name={island.name} img={island.img} action={island.action} handleClick={props.changeView} />)
+    const islands = islandData.map(island => (
+      <Island key={island.id} id={island.id} name={island.name} img={island.img} action={island.action} handleClick={props.changeView} />
+    ));
   return (
     <div className="map-container custom-cursor-area">
         <WhiteHorses />
-        <Bottle />
+        <Bottle onLetterFound={props.onLetterFound} />
         <Birds />
         <North />
         {!props.modalOpen && <CustomCursor />}
