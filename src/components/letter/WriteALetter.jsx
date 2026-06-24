@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import writeLetterImg from '../../assets/WriteALetter.png';
+import CloseButton from '../CloseButton.jsx';
 import '../../styles/letter/Letter.css';
 
 export default function WriteALetter({ onClose }) {
@@ -29,7 +30,7 @@ export default function WriteALetter({ onClose }) {
 
   return (
     <div className="letter-overlay" onClick={onClose}>
-      <button className="letter-close" onClick={onClose} aria-label="Close">&times;</button>
+      <CloseButton onClick={onClose} />
       <form className="letter-wrap" onSubmit={handleSubmit} onClick={e => e.stopPropagation()}>
         <img src={writeLetterImg} alt="Write a letter" className="letter-bg" />
 

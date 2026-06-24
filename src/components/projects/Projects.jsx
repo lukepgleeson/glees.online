@@ -1,11 +1,12 @@
 import ipadImg from '../../assets/Ipad.png';
 import projects from './projectsData.js';
+import CloseButton from '../CloseButton.jsx';
 import '../../styles/projects/Projects.css';
 
 export default function Projects({ onClose }) {
   return (
     <div className="ipad-overlay" onClick={onClose}>
-      <button className="ipad-close" onClick={onClose} aria-label="Close">&times;</button>
+      <CloseButton onClick={onClose} />
 
       <div className="ipad-wrap" onClick={e => e.stopPropagation()}>
         <img src={ipadImg} alt="iPad" className="ipad-bg" />

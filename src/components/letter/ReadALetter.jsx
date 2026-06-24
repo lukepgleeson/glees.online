@@ -1,10 +1,11 @@
 import readLetterImg from '../../assets/ReadALetter.png';
+import CloseButton from '../CloseButton.jsx';
 import '../../styles/letter/Letter.css';
 
 export default function ReadALetter({ letter, onClose }) {
   return (
     <div className="letter-overlay" onClick={onClose}>
-      <button className="letter-close" onClick={onClose} aria-label="Close">&times;</button>
+      <CloseButton onClick={onClose} />
       <div className="letter-wrap" onClick={e => e.stopPropagation()}>
         <img src={readLetterImg} alt="A letter from a bottle" className="letter-bg" />
         <p className="letter-read-title letter-title">{letter.title}</p>

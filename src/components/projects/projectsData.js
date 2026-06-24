@@ -1,42 +1,50 @@
-// Replace placeholder values with your real project details.
-// image: import your screenshot here (e.g. import myImg from '../../assets/projects/my-project.png')
-// link: the URL to the live project or repo
+import gleesonlinePng from '../../assets/gleesonlinethumbnail.png';
+import batnoti from '../../assets/bat-noti.png';
 
 export default [
   {
     id: 1,
-    title: 'Glees.Online',
+    title: 'glees.online',
     description:
-      'My personal portfolio — an ocean-themed interactive map built with React and Vite. Each island links to a different section: articles, projects, experience, and more.',
-    image: null,
+      'This portfolio site — an ocean-themed interactive map built with React and Vite. Each island links to a different section: articles, projects, experience, and more.',
+    image: gleesonlinePng,
     placeholderColor: '#639bff',
-    link: 'https://glees.online',
+    link: 'https://github.com/lukepgleeson/glees.online',
   },
   {
     id: 2,
-    title: 'Project Alpha',
+    title: 'Zombie Apocalypse',
     description:
-      'A dummy project placeholder. Replace this with a real title, screenshot, and description once the project is ready to showcase.',
+      'A Java simulation of a viral zombie outbreak on an N×N grid. Features toroidal grid wrapping, complex infection chains, and an efficient queue-based spread architecture.',
     image: null,
-    placeholderColor: '#e07b54',
-    link: '#',
+    placeholderColor: '#4a7c59',
+    link: 'https://github.com/lukepgleeson/zombie-apocalypse',
   },
   {
     id: 3,
-    title: 'Project Beta',
+    title: 'Bat-Noti',
     description:
-      'Another placeholder. Swap in your actual project — add an image import at the top of projectsData.js and point the image field at it.',
-    image: null,
-    placeholderColor: '#54a87e',
-    link: '#',
+      'A Bash script for i3 that fires separate low-battery notifications per battery, flashes keyboard LEDs, and supports configurable alert thresholds. MIT licensed.',
+    image: batnoti,
+    placeholderColor: '#b07d2e',
+    link: 'https://github.com/lukepgleeson/bat-noti',
   },
   {
     id: 4,
-    title: 'Project Gamma',
+    title: 'Scrimba Exercises',
     description:
-      'Fourth placeholder project. Each card supports a title, multi-line description, thumbnail image, and an external link.',
+      'Exercises from the Scrimba React course, covering React fundamentals, hooks, state management, and component patterns.',
     image: null,
-    placeholderColor: '#9b6fd4',
-    link: '#',
+    placeholderColor: '#4a90c4',
+    link: 'https://github.com/lukepgleeson/scrimba-exercises',
+  },
+  {
+    id: 5,
+    title: 'Base Project',
+    description:
+      'A Spring Boot starter template providing a clean Maven project structure as a foundation for new Java web applications.',
+    image: null,
+    placeholderColor: '#6d4c41',
+    link: 'https://github.com/lukepgleeson/base-project',
   },
 ];

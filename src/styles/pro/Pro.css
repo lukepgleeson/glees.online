@@ -1,0 +1,459 @@
+/* ── Design tokens ───────────────────────────────────────── */
+
+.pro-site {
+  --green-dark:   #162a1e;
+  --green-mid:    #2d6a4f;
+  --green-light:  #52b788;
+  --green-tint:   #f0f7f4;
+  --green-border: #c2ddd2;
+  --text:         #1a1a1a;
+  --text-muted:   #5a6d63;
+  --white:        #ffffff;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  min-height: 100vh;
+}
+
+/* ── Nav ─────────────────────────────────────────────────── */
+
+.pro-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--green-dark);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.pro-nav-brand {
+  color: var(--white);
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.pro-nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.pro-nav-link {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+
+.pro-nav-link:hover { color: var(--white); }
+
+.pro-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pro-nav-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.pro-nav-social-link {
+  display: flex;
+  align-items: center;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+
+.pro-nav-social-link:hover { opacity: 1; }
+
+.pro-nav-social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+
+.pro-hero {
+  background: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+.pro-hero-name {
+  font-family: 'Georgia', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0 0 0.4em;
+  letter-spacing: 0.02em;
+}
+
+.pro-hero-title {
+  font-size: 1.15rem;
+  color: var(--green-light);
+  margin: 0 0 0.3em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.pro-hero-location {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 1.8rem;
+}
+
+.pro-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.pro-tag {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+/* ── Sections ────────────────────────────────────────────── */
+
+.pro-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.pro-section--alt {
+  background: var(--green-tint);
+}
+
+.pro-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.pro-section-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.7rem;
+  color: var(--green-dark);
+  margin: 0 0 1.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--green-mid);
+}
+
+.pro-body-text {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin: 0 0 1em;
+}
+
+/* ── Experience ──────────────────────────────────────────── */
+
+.pro-experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pro-job {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 1.25rem;
+}
+
+.pro-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.pro-job-role {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.15em;
+  color: var(--text);
+}
+
+.pro-job-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pro-job-period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 0.15em;
+}
+
+.pro-job-points {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.pro-job-points li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* ── Projects ────────────────────────────────────────────── */
+
+.pro-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.pro-project-card {
+  background: var(--white);
+  border: 1px solid var(--green-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.pro-project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(22,42,30,0.12);
+}
+
+.pro-project-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.pro-project-body {
+  padding: 1rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  flex: 1;
+}
+
+.pro-project-title {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  margin: 0;
+  color: var(--green-dark);
+}
+
+.pro-project-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.pro-project-link {
+  font-size: 0.85rem;
+  color: var(--green-mid);
+  text-decoration: none;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+.pro-project-link:hover { text-decoration: underline; }
+
+/* ── Articles ────────────────────────────────────────────── */
+
+.pro-articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pro-article-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--green-border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pro-article-card:hover {
+  border-color: var(--green-mid);
+  box-shadow: 0 2px 8px rgba(22,42,30,0.08);
+}
+
+.pro-article-text { flex: 1; }
+
+.pro-article-title {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  margin: 0 0 0.2em;
+  color: var(--green-dark);
+}
+
+.pro-article-snippet {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pro-article-arrow {
+  font-size: 1.1rem;
+  color: var(--green-mid);
+  flex-shrink: 0;
+}
+
+/* ── Education ───────────────────────────────────────────── */
+
+.pro-edu-entry {
+  border-left: 3px solid var(--green-mid);
+  padding-left: 1.25rem;
+}
+
+.pro-edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.pro-edu-degree {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.15em;
+  color: var(--text);
+}
+
+.pro-edu-school {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pro-edu-detail {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.pro-footer {
+  background: var(--green-dark);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.pro-footer-name {
+  font-family: 'Georgia', serif;
+  color: var(--white);
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.pro-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pro-footer-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.15s;
+}
+
+.pro-footer-links a:hover { color: var(--white); }
+
+/* ── Article modal ───────────────────────────────────────── */
+
+.pro-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 2rem;
+}
+
+.pro-modal {
+  background: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.pro-modal-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0.8rem 1rem 0;
+  line-height: 1;
+}
+
+.pro-modal-close:hover { color: var(--text); }
+
+.pro-modal-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: var(--green-dark);
+  margin: 0 1.5rem 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--green-border);
+}
+
+.pro-modal-body {
+  overflow-y: auto;
+  padding: 0 1.5rem 1.5rem;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.pro-modal-body h1,
+.pro-modal-body h2,
+.pro-modal-body h3 {
+  font-family: 'Georgia', serif;
+  color: var(--green-dark);
+}
+
+.pro-modal-body p { margin: 0 0 1em; }
+.pro-modal-body ul,
+.pro-modal-body ol { padding-left: 1.5em; margin: 0 0 1em; }

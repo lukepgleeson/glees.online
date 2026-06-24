@@ -3,6 +3,7 @@ import newspaperImg from '../../assets/Newspaper.png';
 import ArticleSnippet from './ArticleSnippet.jsx';
 import ArticleFull from './ArticleFull.jsx';
 import articles from './articlesData.js';
+import CloseButton from '../CloseButton.jsx';
 import '../../styles/newspaper/Newspaper.css';
 
 export default function Newspaper({ onClose }) {
@@ -10,7 +11,7 @@ export default function Newspaper({ onClose }) {
 
   return (
     <div className="newspaper-overlay" onClick={onClose}>
-      <button className="newspaper-close" onClick={onClose} aria-label="Close">&times;</button>
+      <CloseButton onClick={onClose} />
 
       {activeArticle ? (
         <ArticleFull

@@ -20,7 +20,7 @@ const CURSOR_GIFS = {
   southEast: boatSouthEast,
 };
 
-export default function CustomCursor() {
+export default function CustomCursor({ hoveredIsland }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [direction, setDirection] = useState('north');
   
@@ -73,11 +73,14 @@ export default function CustomCursor() {
   }, [direction]); // Added direction dependency to preserve state correctly within the effect closure
 
   return (
-    <div 
-      className="custom-cursor" 
+    <div
+      className="custom-cursor"
       style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}
     >
       <img src={CURSOR_GIFS[direction]} alt="Dynamic pointer" />
+      {hoveredIsland && (
+        <div className="cursor-tooltip">{hoveredIsland}</div>
+      )}
     </div>
   );
 }

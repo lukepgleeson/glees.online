@@ -1,0 +1,68 @@
+.buoy-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: default;
+}
+
+.buoy-modal-wrap {
+  position: relative;
+  display: inline-block;
+  animation: buoy-pop-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes buoy-pop-in {
+  0%   { transform: scale(0.6); opacity: 0; }
+  70%  { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.buoy-modal-img {
+  display: block;
+  max-width: 85vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+}
+
+.buoy-modal-close {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+  z-index: 2;
+}
+
+.buoy-modal-close:hover { color: rgba(0, 0, 0, 0.85); }
+
+/* Text sits inside the flag body — roughly top 8% to 62%, left 10%+ */
+.buoy-modal-content {
+  position: absolute;
+  top: 7%;
+  left: 11%;
+  right: 9%;
+  bottom: 36%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buoy-modal-text {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  white-space: pre-line;
+  margin: 0;
+}

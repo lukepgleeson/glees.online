@@ -1,0 +1,21 @@
+.modal-close-btn {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.modal-close-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.modal-close-btn:hover img { opacity: 1; }

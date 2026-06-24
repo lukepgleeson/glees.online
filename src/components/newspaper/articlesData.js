@@ -1,4 +1,6 @@
 import exampleArticle from './articles/example-article.md?raw';
+import batNoti from './articles/bat-noti.md?raw';
+import mockoon from './articles/mockoon.md?raw';
 
 // slot: position of this snippet on the newspaper image (percentages of image dimensions)
 const SLOTS = [
@@ -12,16 +14,16 @@ const SLOTS = [
 export default [
   {
     id: 1,
-    title: 'Example Article',
-    snippet: 'A short teaser for the article goes here — one or two sentences to hook the reader.',
-    content: exampleArticle,
+    title: 'Bat-Noti: Battery Alerts for i3',
+    snippet: 'My Lenovo T480 has two batteries and kept dying on me. So I wrote a bash script that fires a separate notification per battery and flashes the keyboard LEDs.',
+    content: batNoti,
     slot: SLOTS[0],
   },
   {
     id: 2,
-    title: 'Example Article',
-    snippet: 'A short teaser for the article goes here — one or two sentences to hook the reader.',
-    content: exampleArticle,
+    title: 'Easy API Testing with Mockoon & Docker',
+    snippet: 'A handy one-liner using Mockoon CLI and an OpenAPI spec to spin up a fully mocked API in seconds — no backend setup required.',
+    content: mockoon,
     slot: SLOTS[1],
   },
   {
